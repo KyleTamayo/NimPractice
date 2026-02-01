@@ -6,6 +6,7 @@ RELEASE_MESSAGE="Building release version"
 DANGER_MESSAGE="Buildling c-like 'danger' version"
 # End Messages
 
+# Begin Build Functions
 remove_previous() {
   if [[ -f "practice" ]]; then
     rm -- "practice" || {
@@ -29,6 +30,8 @@ danger_build() {
   remove_previous
   nim c -d:danger -r practice.nim
 }
+
+# End Build Functions
 
 # Begin Main
 
