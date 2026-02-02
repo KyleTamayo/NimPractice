@@ -11,8 +11,7 @@ let
   longNumber: float = 10.0e90
   million: int = 1_000_000
 
-proc add_together(x: int, y: int): int =
-  ## Add two numbers
+proc add_together(x, y: auto): auto =
   result = x + y
 
 ## Main function, not necessary but added
@@ -27,7 +26,7 @@ proc main() =
 
   echo "Hex: ", hex
   echo "Long Number: ", longNumber
-  echo "Long number x 2 "
+  echo "Long number x 2 = ", add_together(longNumber, longNumber)
   echo "Million: ", million
 
 main()
